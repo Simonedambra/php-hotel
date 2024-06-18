@@ -65,56 +65,38 @@ $hotels = [
 
     <table class="table">
         <thead>
-
-
             <tr>
-                <?php foreach ($hotels as $hotellist) {
+                <?php foreach ($hotels[0] as $key => $value) {
                     echo '<th scope="row">';
-                    foreach ($hotellist as $key => $value) {
-                        echo $value;
-                    }
+                    echo $key;
                     echo '</th>';
-                }
-
-
-
-                ?>
+                } ?>
             </tr>
         </thead>
         <tbody class="table-group-divider">
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
-    <hr>
-    <?php foreach ($hotels as $hotellist) {
-        echo '<th scope="row">';
-        foreach ($hotellist as $key => $value) {
-            echo $value;
 
-            echo '<br>';
-        }
-        echo '</th>';
-    }
+            <?php foreach ($hotels as $key => $value) {
+                echo '<tr>';
+                echo '<td>';
+                echo ($value['name']);
+                echo '</td>';
+                echo '<td>';
+                echo ($value['description']);
+                echo '</td>';
+                echo '<td>';
+                echo ($value['parking']);
+                echo '</td>';
+                echo '<td>';
+                echo ($value['vote']);
+                echo '</td>';
+                echo '<td>';
+                echo ($value['distance_to_center']);
+                echo '</td>';
+
+                echo '</tr>';
+            } ?>
 
 
-
-    ?>
 </body>
 
 </html>
