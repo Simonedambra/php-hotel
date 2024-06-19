@@ -75,26 +75,25 @@ $hotels = [
         </thead>
         <tbody class="table-group-divider">
 
-            <?php foreach ($hotels as $key => $value) {
-                echo '<tr>';
-                echo '<td>';
-                echo ($value['name']);
-                echo '</td>';
-                echo '<td>';
-                echo ($value['description']);
-                echo '</td>';
-                echo '<td>';
-                echo ($value['parking']);
-                echo '</td>';
-                echo '<td>';
-                echo ($value['vote']);
-                echo '</td>';
-                echo '<td>';
-                echo ($value['distance_to_center']);
-                echo '</td>';
-
-                echo '</tr>';
-            } ?>
+            <?php foreach ($hotels as $key => $value) : ?>
+                <tr>
+                    <td>
+                        <?php echo ($value['name']); ?>
+                    </td>
+                    <td>
+                        <?php echo ($value['description']); ?>
+                    </td>
+                    <td>
+                        <?php echo ($value['parking']); ?>
+                    </td>
+                    <td>
+                        <?php echo ($value['vote']); ?>
+                    </td>
+                    <td>
+                        <?php echo ($value['distance_to_center']); ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
 
 
 </body>
